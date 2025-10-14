@@ -50,7 +50,8 @@ def register_client_with_sp(session: Session, reg_data: FullClientRegistration) 
 
         # 4. Verificamos si el SP devolvió un mensaje de error.
         #    El mensaje de error es el tercer valor (índice 2) que devuelve nuestro SELECT.
-        if out_params_result and out_params_result[2]: 
+        print(f"Resultado devuelto por la BD (out_params_result): {out_params_result}")
+        if out_params_result and out_params_result[2] != "OK":
             # Si el mensaje no es NULL, significa que hubo un error de negocio.
             raise ValueError(out_params_result[2])
 
