@@ -84,6 +84,8 @@ MANIFEST
 *.manifest
 *.spec
 
+#hola
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
